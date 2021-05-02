@@ -1,0 +1,19 @@
+<app-header titulo="lists"></app-header>
+
+<ion-content>
+    <ion-text color="primary" class="ion-text-center">
+        <h1>Listado de Usuarios</h1>
+        <hr color="primary">
+    </ion-text>
+    <ion-list>
+        <!-- para obtener el resultado de mi observable, debemos suscribirnos, para esto usamos el async -->
+        <ion-item *ngFor="let usuario of usuarios|async">
+            <ion-label>
+                <h3>{{ usuario.name }}</h3>
+                <p>{{ usuario.email }}</p>
+            </ion-label>
+
+            <ion-label slot="end" class="ion-text-end text-small">{{ usuario.phone }}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

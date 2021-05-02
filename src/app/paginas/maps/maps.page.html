@@ -1,0 +1,22 @@
+<app-header titulo="geolocalización"></app-header>
+
+<ion-content class="ion-padding">
+    <h3 class="ion-text-center" color="primary">Mi ubicación Geográfica</h3>
+    <ion-list>
+        <ion-item>
+            <ion-label>Latitud :</ion-label>
+            <ion-note slot="end"> {{ lat }} </ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>Longitud :</ion-label>
+            <ion-note slot="end"> {{ lng }} </ion-note>
+        </ion-item>
+    </ion-list>
+
+    <ion-item>
+    </ion-item>
+    <ion-button expand="block" [routerLink]="[ '/mapa/' , lat  , lng  ]">
+        <ion-icon slot="start" name="pin"></ion-icon>
+        <ion-label>Ver mi ubicación en el mapa</ion-label>
+    </ion-button>
+</ion-content>

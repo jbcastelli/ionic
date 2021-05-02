@@ -1,0 +1,40 @@
+<!-- <app-header titulo="push notifications"></app-header> -->
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/" color="primary" text="Regresar"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>Push Recibidas</ion-title>
+
+        <ion-buttons slot="end">
+            <ion-button (click)="borrarMensajes()" color="danger">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header class="ion-text-center">
+            <ion-label color="warning">
+                Device Id:
+            </ion-label>
+            <ion-label color="primary">
+                {{ pushService.userId}}
+            </ion-label>
+            <hr color="blue">
+        </ion-list-header>
+
+        <ion-item *ngFor="let push of mensajes">
+            <ion-label>
+                <h3> {{ push.title }} </h3>
+                <p> {{ push.body }} </p>
+                <p> {{ push.additionalData | json }} </p>
+                <!-- lo paso por el pipe json de angular, ya que el additionalData es un objeto json -->
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

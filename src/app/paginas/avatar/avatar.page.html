@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/" color="primary" text="Regresar"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>Avatar</ion-title>
+
+        <ion-buttons slot="end">
+            <ion-avatar>
+                <img src="/assets/avatar.png" />
+            </ion-avatar>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-chip color="primary" outline="true" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+        <ion-avatar>
+            <img src="/assets/avatar.png" />
+        </ion-avatar>
+        <ion-label>Default</ion-label>
+    </ion-chip>
+
+    <ion-list *ngFor="let item of [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]">
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src="/assets/avatar.png" />
+            </ion-avatar>
+            <ion-label>Item Avatar</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

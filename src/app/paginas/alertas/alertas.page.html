@@ -1,0 +1,16 @@
+<app-header titulo="Alertas"></app-header>
+
+<ion-content class="ion-padding">
+    <!-- Solo escribir ipadding + tab: me crea la clase automáticamente -->
+    <ion-button (click)="presentAlert()" expand="block">
+        Mostrar Alert
+    </ion-button>
+
+    <ion-button (click)="presentAlertMultipleButtons()" expand="block" color="secondary">
+        Mostrar Alert MultipleButtons
+    </ion-button>
+
+    <ion-button (click)="presentAlertPrompt()" expand="block" color="tertiary">
+        Mostrar Alert Prompt
+    </ion-button>
+</ion-content>

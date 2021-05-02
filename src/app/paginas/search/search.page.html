@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Search</ion-title>
+
+        <ion-buttons slot="start">
+            <ion-back-button color="primary" text="Regresar" defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <ion-searchbar placeholder="Buscar algo" animated inputmode="text" (ionChange)="onSearchChange( $event )" debounce="1500">
+        <!-- fijarse en consola en que momento se llama al método onSearchChange, existe un ligero retardo el cuál es
+             manejado por la propiedad  debounce (debounce es un método que permite retrasar la llamada de tu función hasta
+             que no pasen los mili-segundos que hayas definido). El valor mas razonable es 250ms -->
+    </ion-searchbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <!-- para obtener el resultado de mi observable, debemos suscribirnos, para esto usamos el async -->
+        <!-- <ion-item *ngFor="let album of albumes|async"> -->
+
+        <!-- Ahora vamos a implementar un nuevo pipe que me permita filtrar la información. Lo llamamos "filtro" -->
+        <ion-item *ngFor="let album of albumes | async | filtro: textoBuscar:'title'">
+            <ion-label>
+                {{ album.title }}
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

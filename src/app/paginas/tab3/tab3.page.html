@@ -1,0 +1,17 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Favoritos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div *ngIf="localDataService.noticias.length === 0" class="centrado">
+        <!-- <ion-img src="/assets/warning.svg"></ion-img> -->
+        <ion-label>No hay noticias en Favoritos</ion-label>
+    </div>
+
+    <app-noticias *ngIf="localDataService.noticias.length > 0" [noticias]="localDataService.noticias" [enFavoritos]="true">
+    </app-noticias>
+
+</ion-content>

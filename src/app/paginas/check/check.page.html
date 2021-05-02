@@ -1,0 +1,21 @@
+<app-header titulo="check box">
+</app-header>
+
+<ion-content>
+
+    <ion-list>
+        <!-- Implementar una forma de visualizar el estado del check box  -->
+        <ion-item *ngFor="let item of datos" (click)="onClick( item )">
+            <ion-label>{{ item.color}}</ion-label>
+            <!-- Hasta aquí probar el funcionamiento -->
+            <!-- <ion-checkbox [color]="item.nombre" slot="end"></ion-checkbox> -->
+            <!-- Luego implementar el ngModel -->
+            <ion-checkbox [color]="item.color" [(ngModel)]="item.estado" slot="end"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+
+    <ion-button (click)="verDatos()" expand="block" color="medium">
+        Ver Estados
+    </ion-button>
+
+</ion-content>

@@ -1,0 +1,31 @@
+<app-header titulo="grids"></app-header>
+
+<ion-content>
+
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]">
+                <!--
+                   size="12" - tamaño de la columna por default sería 12  (aplicaría a dispositivos que no son lg, md, sm, etc.)
+                   size-lg="3" - talla lg, el tamaño de cada columna sería 3, es decir cabrían 4col
+                   size-md="4" - talla md, el tamaño de cada columna sería 4, es decir cabrían 3col
+                   size-sm="6" - talla sm, el tamaño de cada columna sería 6, es decir cabrían 2col
+                -->
+
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+                        <ion-card-title>Awesome Title</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-img src="assets/avatar.png"></ion-img>
+
+                    <ion-card-content>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

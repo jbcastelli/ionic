@@ -1,0 +1,22 @@
+<ion-card>
+    <ion-card-header>
+        <ion-card-subtitle>
+            <span class="text-primary"> {{ i + 1 }}. {{ enFavoritos }} </span>
+            <span>{{ noticia.source.name }}</span>
+
+            <div class="noticia-more">
+                <ion-button fill="clear" (click)="mostrarMenu()">
+                    <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+                </ion-button>
+            </div>
+        </ion-card-subtitle>
+        <ion-card-title (click)="abrirNoticia()"> {{ noticia.title }} </ion-card-title>
+    </ion-card-header>
+
+    <!-- pero no todas las noticias tienen image, por lo tanto uso un ngIf para validar si existe imagen -->
+    <ion-img *ngIf="noticia.urlToImage" (click)="abrirNoticia()" [src]=" noticia.urlToImage "></ion-img>
+
+    <ion-card-content>
+        <p>{{ noticia.content }}</p>
+    </ion-card-content>
+</ion-card>

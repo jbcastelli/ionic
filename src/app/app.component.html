@@ -1,3 +1,33 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+    <ion-split-pane when="md" contentId="main">
+
+        <ion-menu side="start" menuId="first" contentId="main">
+            <!-- el menuId="first" especifica el nombre del menú, ya que se pueden tener varios -->
+            <!-- el contentId="main" especifica el id del contenido que se ocultará, desplazará -->
+            <ion-header>
+                <ion-toolbar color="primary">
+                    <ion-title>Menú</ion-title>
+                </ion-toolbar>
+            </ion-header>
+
+            <ion-content>
+                <ion-list>
+
+                    <ion-menu-toggle *ngFor="let c of componentes|async" autoHide="false">
+                        <ion-item [routerLink]="c.direccion" class="ion-text-capitalize" detail>
+                            <ion-icon [name]="c.icono" slot='start' color="primary"></ion-icon>
+                            {{ c.nombre }}
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+
+        <ion-router-outlet id="main"></ion-router-outlet>
+        <!-- el id="main" está relacionado con el contentId="main" de ion-menu -->
+
+    </ion-split-pane>
+
 </ion-app>

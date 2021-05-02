@@ -1,0 +1,66 @@
+[{
+        "icono": "apps-outline",
+        "nombre": "acciones",
+        "direccion": "/acciones"
+    },
+    {
+        "icono": "warning-outline",
+        "nombre": "alertas",
+        "direccion": "/alertas"
+    },
+    {
+        "icono": "person-outline",
+        "nombre": "Avatar",
+        "direccion": "/avatar"
+    },
+    {
+        "icono": "radio-button-on-outline",
+        "nombre": "Botones",
+        "direccion": "/botones"
+    },
+    {
+        "icono": "card-outline",
+        "nombre": "Cards",
+        "direccion": "/card"
+    },
+    {
+        "icono": "checkmark-circle-outline",
+        "nombre": "Check Box",
+        "direccion": "/check"
+    },
+    {
+        "icono": "open-outline",
+        "nombre": "Floating Action Button",
+        "direccion": "/fab"
+    },
+    {
+        "icono": "grid-outline",
+        "nombre": "Grids",
+        "direccion": "/grid"
+    },
+    {
+        "icono": "list-outline",
+        "nombre": "Lists",
+        "direccion": "/list"
+    },
+    {
+        "icono": "search-outline",
+        "nombre": "Search",
+        "direccion": "/search"
+    },
+    {
+        "icono": "newspaper-outline",
+        "nombre": "Tabs - Noticias",
+        "direccion": "/tabs"
+    },
+    {
+        "icono": "notifications-outline",
+        "nombre": "Push - Notifications",
+        "direccion": "/push"
+    },
+    {
+        "icono": "map-outline",
+        "nombre": "geolocalización",
+        "direccion": "/maps"
+    }
+]
